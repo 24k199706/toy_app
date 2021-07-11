@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :microposts
+  resources :users
+
+  get 'microposts',to:"microposts#index",as:"micropost_index"
+  get 'microposts/:id',to:"microposts#show",as:"micropost_show"
+  get 'microposts/new',to:"microposts#new",as:"micropost_new"
+  get 'microposts/:id/edit',to:"microposts#edit",as:"micropost_edit"
   root "users#index"
   get "users/:id",to: "users#show",as: "show"
   get "users/new",to: "users#new",as: "new"

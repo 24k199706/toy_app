@@ -1,16 +1,14 @@
-class UsersController < ApplicationController
+class MicropostsController < ApplicationController
   def index
-    @users=User.all
   end
 
   def show
-
+  
   end
 
   def new
-    
-  end
 
+  end
   def edit
 
   end
@@ -25,5 +23,4 @@ class UsersController < ApplicationController
   def destroy
 
   end
-  
 end
